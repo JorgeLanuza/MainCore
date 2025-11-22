@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="maincore.client/maincore.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="MainCore.Server/MainCore.Server.csproj" />
+</Solution>
