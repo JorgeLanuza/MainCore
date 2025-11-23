@@ -1,7 +1,10 @@
 <Solution>
+  <Project Path="MainCore.Application/MainCore.Application.csproj" Id="087fa245-3e9d-407a-b8ee-9e9c6fac74af" />
   <Project Path="maincore.client/maincore.client.esproj">
     <Build />
     <Deploy />
   </Project>
-  <Project Path="MainCore.Server/MainCore.Server.csproj" />
+  <Project Path="MainCore.Domain/MainCore.Domain.csproj" Id="ece5577f-4f01-4c77-aed8-6d6f3a307835" />
+  <Project Path="MainCore.Infrastructure/MainCore.Infrastructure.csproj" Id="78e93e34-139f-409e-a5ec-b2566ad9b39b" />
+  <Project Path="MainCore.Server/MainCore.WebApi.csproj" />
 </Solution>

@@ -1,0 +1,36 @@
+<div class="dashboard-container">
+    <!-- Left Column: Stats & Feed -->
+    <div class="stats-column">
+        <app-stat-card label="Total Transformers" [value]="store.stats().total" icon="pi-server" trend="+12%"
+            trendDirection="up">
+        </app-stat-card>
+
+        <app-stat-card label="Active Alerts" [value]="store.stats().alerts" icon="pi-exclamation-triangle" trend="+2"
+            trendDirection="down">
+        </app-stat-card>
+
+        <app-stat-card label="System Efficiency" [value]="store.stats().efficiency + '%'" icon="pi-bolt" trend="-0.5%"
+            trendDirection="down">
+        </app-stat-card>
+
+        <app-stat-card label="Grid Load" value="84%" icon="pi-chart-bar" trend="+5%" trendDirection="up">
+        </app-stat-card>
+
+        <!-- Activity Feed (Bottom) -->
+        <div class="feed-section">
+            <app-activity-feed [events]="store.recentEvents()"></app-activity-feed>
+        </div>
+    </div>
+
+    <!-- Right Column: Chart Only -->
+    <div class="main-column">
+        <!-- Chart Section (Top) -->
+        <div class="chart-section">
+            <p-card header="Efficiency Trends" styleClass="h-full">
+                <div style="height: 100%; width: 100%; position: relative;">
+                    <app-efficiency-chart></app-efficiency-chart>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>

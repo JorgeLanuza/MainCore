@@ -1,0 +1,17 @@
+<p-card header="Recent Activity" styleClass="h-full">
+    <p-timeline [value]="events">
+        <ng-template pTemplate="content" let-event>
+            <small class="text-gray-500">{{ event.timestamp | date:'shortTime' }}</small>
+            <div class="font-medium">{{ event.message }}</div>
+        </ng-template>
+        <ng-template pTemplate="marker" let-event>
+            <span class="flex w-8 h-8 items-center justify-center rounded-full text-white" [ngClass]="{
+              'bg-red-500': event.type === 'alert',
+              'bg-blue-500': event.type === 'info',
+              'bg-yellow-500': event.type === 'warning'
+            }">
+                <i [class]="getIcon(event.type)"></i>
+            </span>
+        </ng-template>
+    </p-timeline>
+</p-card>

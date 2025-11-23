@@ -1,0 +1,95 @@
+:host {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-wrapper.hidden-navbar {
+    transform: translateY(-100%);
+}
+
+/* Custom Menubar Styles */
+::ng-deep .custom-menubar {
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(4px);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.brand-icon {
+    color: #f59e0b;
+    /* yellow-500 */
+    font-size: 1.5rem;
+}
+
+.brand-text {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #111827;
+    /* gray-900 */
+}
+
+.actions-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action-icon {
+    color: #6b7280;
+    /* gray-500 */
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+.action-icon:hover {
+    color: #1f2937;
+    /* gray-800 */
+}
+
+::ng-deep .user-avatar {
+    background-color: #dbeafe !important;
+    /* blue-100 */
+    color: #2563eb !important;
+    /* blue-600 */
+}
+
+.layout-content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f9fafb;
+    /* gray-50 */
+    padding-top: 90px;
+    /* Explicit padding for content */
+}
+
+.content-inner {
+    padding: 1rem;
+    min-height: 100%;
+}
