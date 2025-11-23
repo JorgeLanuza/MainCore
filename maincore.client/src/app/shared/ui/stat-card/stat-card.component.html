@@ -1,0 +1,15 @@
+<p-card styleClass="h-full shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div class="flex justify-between items-start mb-2">
+        <div>
+            <span class="block text-500 font-medium mb-1">{{ label }}</span>
+            <div class="text-900 font-bold text-2xl">{{ value }}</div>
+        </div>
+        <div class="flex items-center justify-center bg-blue-100 rounded-full w-10 h-10">
+            <i [class]="'pi ' + icon + ' text-blue-500 text-xl'"></i>
+        </div>
+    </div>
+    <span [class]="trendColor" class="font-medium">
+        <i [class]="trendIcon"></i> {{ trend }}
+    </span>
+    <span class="text-500"> since last week</span>
+</p-card>

@@ -1,0 +1,27 @@
+<div class="layout-wrapper">
+    <!-- Navbar -->
+    <div class="navbar-wrapper" [class.hidden-navbar]="isHidden()">
+        <p-menubar [model]="items" styleClass="custom-menubar">
+            <ng-template pTemplate="start">
+                <div class="brand-container">
+                    <i class="pi pi-bolt brand-icon"></i>
+                    <span class="brand-text">GridGuard</span>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="end">
+                <div class="actions-container">
+                    <i class="pi pi-bell action-icon"></i>
+                    <i class="pi pi-cog action-icon"></i>
+                    <p-avatar icon="pi pi-user" styleClass="user-avatar" shape="circle"></p-avatar>
+                </div>
+            </ng-template>
+        </p-menubar>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="layout-content" (scroll)="onScroll($event)">
+        <div class="content-inner">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
